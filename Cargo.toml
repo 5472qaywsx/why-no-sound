@@ -1,0 +1,21 @@
+[package]
+name = "why-no-sound"
+version = "1.0.0"
+edition = "2021"
+authors = ["Why No Sound Contributors"]
+description = "A diagnostic CLI tool that explains why Linux audio isn't working"
+license = "MIT"
+repository = "https://github.com/example/why-no-sound"
+keywords = ["audio", "linux", "pipewire", "pulseaudio", "diagnostics"]
+categories = ["command-line-utilities"]
+
+[dependencies]
+clap = { version = "4", features = ["derive"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+anyhow = "1"
+
+[profile.release]
+strip = true
+lto = true
+codegen-units = 1
