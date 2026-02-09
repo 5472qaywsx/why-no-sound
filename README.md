@@ -22,6 +22,8 @@ A single-binary Linux CLI tool that diagnoses why your audio isn't working and e
 
 ## Installation
 
+`git clone` this repo to your machine.
+
 ```bash
 cargo build --release
 sudo cp target/release/why-no-sound /usr/local/bin/
